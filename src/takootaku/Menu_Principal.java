@@ -13,6 +13,7 @@ public class Menu_Principal extends javax.swing.JFrame {
     /**
      * Creates new form Menu_Principal
      */
+    static int opcion;
     public Menu_Principal() {
         initComponents();
     }
@@ -86,6 +87,11 @@ public class Menu_Principal extends javax.swing.JFrame {
         jButton1.setText("Botón con foto de accesorios que habre la ventana principal de accesorios");
 
         jButton2.setText("Botón con foto de ropa. Lleva un hipervinculo para abrir la ventana principal de ropa");
+        jButton2.addMouseListener(new java.awt.event.MouseAdapter() {
+            public void mouseClicked(java.awt.event.MouseEvent evt) {
+                jButton2MouseClicked(evt);
+            }
+        });
 
         jButton3.setText("Boton que abre la ventan aprincipal de figurillas");
 
@@ -157,6 +163,11 @@ public class Menu_Principal extends javax.swing.JFrame {
         jMenu1.setText("Ropa");
 
         jMenuItem2.setText("Sudaderas");
+        jMenuItem2.addMouseListener(new java.awt.event.MouseAdapter() {
+            public void mouseClicked(java.awt.event.MouseEvent evt) {
+                jMenuItem2MouseClicked(evt);
+            }
+        });
         jMenu1.add(jMenuItem2);
 
         jMenuItem3.setText("Playeras");
@@ -181,6 +192,11 @@ public class Menu_Principal extends javax.swing.JFrame {
         menuBar.add(jMenu2);
 
         jMenu3.setText("Manga");
+        jMenu3.addMouseListener(new java.awt.event.MouseAdapter() {
+            public void mouseClicked(java.awt.event.MouseEvent evt) {
+                jMenu3MouseClicked(evt);
+            }
+        });
         menuBar.add(jMenu3);
 
         jMenu4.setText("Figurillas");
@@ -219,7 +235,31 @@ public class Menu_Principal extends javax.swing.JFrame {
         pack();
     }// </editor-fold>//GEN-END:initComponents
 
+    private void jMenuItem2MouseClicked(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_jMenuItem2MouseClicked
+        
+        /*
+        Ropa_Principal obmropa = new Ropa_Principal();
+        obmropa.setVisible(true);
+        
+        */
+    }//GEN-LAST:event_jMenuItem2MouseClicked
 
+    private void jButton2MouseClicked(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_jButton2MouseClicked
+        opcion = 1;
+        Contenedor();
+    }//GEN-LAST:event_jButton2MouseClicked
+
+    private void jMenu3MouseClicked(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_jMenu3MouseClicked
+        opcion=2;
+        Contenedor();
+    }//GEN-LAST:event_jMenu3MouseClicked
+    public void Contenedor(){
+        Contenedor obcon = new Contenedor(opcion);
+        obcon.setVisible(true);
+    }
+    /**
+     * @param args the command line arguments
+     */
     public static void main(String args[]) {
         /* Set the Nimbus look and feel */
         //<editor-fold defaultstate="collapsed" desc=" Look and feel setting code (optional) ">
