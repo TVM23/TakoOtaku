@@ -134,7 +134,7 @@ public class Crear_Cuenta extends javax.swing.JFrame {
 
         btnVolver.setBackground(new java.awt.Color(255, 255, 255));
 
-        txtVolver.setText("Volver");
+        txtVolver.setText("< Volver");
         txtVolver.setCursor(new java.awt.Cursor(java.awt.Cursor.HAND_CURSOR));
         txtVolver.addMouseListener(new java.awt.event.MouseAdapter() {
             public void mouseClicked(java.awt.event.MouseEvent evt) {
@@ -146,7 +146,9 @@ public class Crear_Cuenta extends javax.swing.JFrame {
         btnVolver.setLayout(btnVolverLayout);
         btnVolverLayout.setHorizontalGroup(
             btnVolverLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-            .addComponent(txtVolver)
+            .addGroup(btnVolverLayout.createSequentialGroup()
+                .addComponent(txtVolver, javax.swing.GroupLayout.PREFERRED_SIZE, 48, javax.swing.GroupLayout.PREFERRED_SIZE)
+                .addGap(0, 0, Short.MAX_VALUE))
         );
         btnVolverLayout.setVerticalGroup(
             btnVolverLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
