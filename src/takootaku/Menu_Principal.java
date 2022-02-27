@@ -49,17 +49,9 @@ public class Menu_Principal extends javax.swing.JFrame {
         jButton4 = new javax.swing.JButton();
         menuBar = new javax.swing.JMenuBar();
         jMenu1 = new javax.swing.JMenu();
-        jMenuItem2 = new javax.swing.JMenuItem();
-        jMenuItem3 = new javax.swing.JMenuItem();
-        jMenuItem4 = new javax.swing.JMenuItem();
-        jMenuItem5 = new javax.swing.JMenuItem();
         jMenu2 = new javax.swing.JMenu();
-        jMenuItem6 = new javax.swing.JMenuItem();
-        jMenuItem8 = new javax.swing.JMenuItem();
         jMenu3 = new javax.swing.JMenu();
         jMenu4 = new javax.swing.JMenu();
-        jMenuItem9 = new javax.swing.JMenuItem();
-        jMenuItem11 = new javax.swing.JMenuItem();
         jMenu5 = new javax.swing.JMenu();
         jMenuItem12 = new javax.swing.JMenuItem();
         jMenuItem14 = new javax.swing.JMenuItem();
@@ -93,11 +85,6 @@ public class Menu_Principal extends javax.swing.JFrame {
         jButton1.setText("Botón con foto de accesorios que habre la ventana principal de accesorios");
 
         jButton2.setText("Botón con foto de ropa. Lleva un hipervinculo para abrir la ventana principal de ropa");
-        jButton2.addMouseListener(new java.awt.event.MouseAdapter() {
-            public void mouseClicked(java.awt.event.MouseEvent evt) {
-                jButton2MouseClicked(evt);
-            }
-        });
 
         jButton3.setText("Boton que abre la ventan aprincipal de figurillas");
 
@@ -167,34 +154,14 @@ public class Menu_Principal extends javax.swing.JFrame {
         );
 
         jMenu1.setText("Ropa");
-
-        jMenuItem2.setText("Sudaderas");
-        jMenuItem2.addMouseListener(new java.awt.event.MouseAdapter() {
+        jMenu1.addMouseListener(new java.awt.event.MouseAdapter() {
             public void mouseClicked(java.awt.event.MouseEvent evt) {
-                jMenuItem2MouseClicked(evt);
+                jMenu1MouseClicked(evt);
             }
         });
-        jMenu1.add(jMenuItem2);
-
-        jMenuItem3.setText("Playeras");
-        jMenu1.add(jMenuItem3);
-
-        jMenuItem4.setText("Cosplay");
-        jMenu1.add(jMenuItem4);
-
-        jMenuItem5.setText("Otros");
-        jMenu1.add(jMenuItem5);
-
         menuBar.add(jMenu1);
 
         jMenu2.setText("Accesorios");
-
-        jMenuItem6.setText("Bisuteria");
-        jMenu2.add(jMenuItem6);
-
-        jMenuItem8.setText("Otros");
-        jMenu2.add(jMenuItem8);
-
         menuBar.add(jMenu2);
 
         jMenu3.setText("Manga");
@@ -206,13 +173,6 @@ public class Menu_Principal extends javax.swing.JFrame {
         menuBar.add(jMenu3);
 
         jMenu4.setText("Figurillas");
-
-        jMenuItem9.setText("Funkos");
-        jMenu4.add(jMenuItem9);
-
-        jMenuItem11.setText("Figurillas");
-        jMenu4.add(jMenuItem11);
-
         menuBar.add(jMenu4);
 
         jMenu5.setText("Contacto");
@@ -241,24 +201,15 @@ public class Menu_Principal extends javax.swing.JFrame {
         pack();
     }// </editor-fold>//GEN-END:initComponents
 
-    private void jMenuItem2MouseClicked(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_jMenuItem2MouseClicked
-        
-        /*
-        Ropa_Principal obmropa = new Ropa_Principal();
-        obmropa.setVisible(true);
-        
-        */
-    }//GEN-LAST:event_jMenuItem2MouseClicked
-
-    private void jButton2MouseClicked(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_jButton2MouseClicked
-        opcion = 1;
-        Contenedor();
-    }//GEN-LAST:event_jButton2MouseClicked
-
     private void jMenu3MouseClicked(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_jMenu3MouseClicked
         opcion=2;
         Contenedor();
     }//GEN-LAST:event_jMenu3MouseClicked
+
+    private void jMenu1MouseClicked(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_jMenu1MouseClicked
+       opcion=1;
+       Contenedor();
+    }//GEN-LAST:event_jMenu1MouseClicked
     public void Contenedor(){
         Contenedor obcon = new Contenedor(opcion);
         obcon.setVisible(true);
@@ -316,18 +267,10 @@ public class Menu_Principal extends javax.swing.JFrame {
     private javax.swing.JMenu jMenu5;
     private javax.swing.JMenuItem jMenuItem1;
     private javax.swing.JMenuItem jMenuItem10;
-    private javax.swing.JMenuItem jMenuItem11;
     private javax.swing.JMenuItem jMenuItem12;
     private javax.swing.JMenuItem jMenuItem13;
     private javax.swing.JMenuItem jMenuItem14;
-    private javax.swing.JMenuItem jMenuItem2;
-    private javax.swing.JMenuItem jMenuItem3;
-    private javax.swing.JMenuItem jMenuItem4;
-    private javax.swing.JMenuItem jMenuItem5;
-    private javax.swing.JMenuItem jMenuItem6;
     private javax.swing.JMenuItem jMenuItem7;
-    private javax.swing.JMenuItem jMenuItem8;
-    private javax.swing.JMenuItem jMenuItem9;
     private javax.swing.JPanel jPanel1;
     private javax.swing.JPanel jPanel2;
     private javax.swing.JScrollBar jScrollBar1;
