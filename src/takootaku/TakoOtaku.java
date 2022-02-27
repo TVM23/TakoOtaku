@@ -14,7 +14,8 @@ public class TakoOtaku {
      * @param args the command line arguments
      */
     public static void main(String[] args) {
-        // TODO code application logic here
+        Menu_Principal obm = new Menu_Principal();
+        obm.setVisible(true);
     }
     
 }
