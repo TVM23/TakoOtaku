@@ -1,4 +1,8 @@
 # TakoOtaku
+<<<<<<< HEAD
+=======
+
+>>>>>>> d23303c6c7292241dbe9d77681dd431bddbfba74
 Proyecto, aplicación para escritorio
 
 aplicacion administrativa para una tienda
