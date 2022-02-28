@@ -214,7 +214,8 @@ public class Crear_Cuenta extends javax.swing.JFrame {
                         .addGap(7, 7, 7)
                         .addComponent(txtconfirmarcontra, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)))
                 .addGap(17, 17, 17)
-                .addComponent(btncrear, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE))
+                .addComponent(btncrear, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
+                .addContainerGap(16, Short.MAX_VALUE))
         );
 
         javax.swing.GroupLayout layout = new javax.swing.GroupLayout(getContentPane());
@@ -225,7 +226,9 @@ public class Crear_Cuenta extends javax.swing.JFrame {
         );
         layout.setVerticalGroup(
             layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-            .addComponent(panel, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
+            .addGroup(layout.createSequentialGroup()
+                .addComponent(panel, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
+                .addGap(0, 0, Short.MAX_VALUE))
         );
 
         pack();
@@ -347,7 +350,7 @@ public class Crear_Cuenta extends javax.swing.JFrame {
         {
             if(!(VerificarCorreo(txtcorreo.getText())))
             {
-                JOptionPane.showMessageDialog(this, "El correo ingresado no es valido, Intente nuevamente, intente ingresarlo nuevamente", "Registro", JOptionPane.ERROR_MESSAGE);
+                JOptionPane.showMessageDialog(this, "El correo ingresado no es valido, intente ingresarlo nuevamente", "Registro", JOptionPane.ERROR_MESSAGE);
             }
             else
             {
