@@ -4,6 +4,7 @@ package takootaku;
 import java.awt.Color;
 import javax.swing.JOptionPane;
 import logicaproyecto.Usuario;
+import logicaproyecto.hash;
 
 public class InicioSesion extends javax.swing.JFrame {
     
@@ -12,12 +13,14 @@ public class InicioSesion extends javax.swing.JFrame {
     public InicioSesion() {
         initComponents();
         setLocationRelativeTo(null);
+        this.ocultar.setVisible(false);
     }
 
     @SuppressWarnings("unchecked")
     // <editor-fold defaultstate="collapsed" desc="Generated Code">//GEN-BEGIN:initComponents
     private void initComponents() {
 
+        jComboBox1 = new javax.swing.JComboBox<>();
         panel = new javax.swing.JPanel();
         CuadroImagen = new javax.swing.JLabel();
         TituloInicioSesion = new javax.swing.JLabel();
@@ -29,6 +32,10 @@ public class InicioSesion extends javax.swing.JFrame {
         btncrearcuenta = new javax.swing.JPanel();
         txtccuenta = new javax.swing.JLabel();
         txtcontra = new javax.swing.JPasswordField();
+        ver = new javax.swing.JLabel();
+        ocultar = new javax.swing.JLabel();
+
+        jComboBox1.setModel(new javax.swing.DefaultComboBoxModel<>(new String[] { "Item 1", "Item 2", "Item 3", "Item 4" }));
 
         setDefaultCloseOperation(javax.swing.WindowConstants.EXIT_ON_CLOSE);
 
@@ -71,7 +78,7 @@ public class InicioSesion extends javax.swing.JFrame {
         );
         btniIngresarLayout.setVerticalGroup(
             btniIngresarLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-            .addComponent(txtentrar, javax.swing.GroupLayout.DEFAULT_SIZE, 31, Short.MAX_VALUE)
+            .addComponent(txtentrar, javax.swing.GroupLayout.PREFERRED_SIZE, 38, javax.swing.GroupLayout.PREFERRED_SIZE)
         );
 
         txtccuenta.setFont(new java.awt.Font("Segoe UI", 2, 10)); // NOI18N
@@ -92,7 +99,7 @@ public class InicioSesion extends javax.swing.JFrame {
         );
         btncrearcuentaLayout.setVerticalGroup(
             btncrearcuentaLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-            .addComponent(txtccuenta, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
+            .addComponent(txtccuenta, javax.swing.GroupLayout.PREFERRED_SIZE, 38, javax.swing.GroupLayout.PREFERRED_SIZE)
         );
 
         txtcontra.setForeground(new java.awt.Color(204, 204, 204));
@@ -108,6 +115,22 @@ public class InicioSesion extends javax.swing.JFrame {
             }
         });
 
+        ver.setText("Ver");
+        ver.setCursor(new java.awt.Cursor(java.awt.Cursor.HAND_CURSOR));
+        ver.addMouseListener(new java.awt.event.MouseAdapter() {
+            public void mouseClicked(java.awt.event.MouseEvent evt) {
+                verMouseClicked(evt);
+            }
+        });
+
+        ocultar.setText("Ocultar");
+        ocultar.setCursor(new java.awt.Cursor(java.awt.Cursor.HAND_CURSOR));
+        ocultar.addMouseListener(new java.awt.event.MouseAdapter() {
+            public void mouseClicked(java.awt.event.MouseEvent evt) {
+                ocultarMouseClicked(evt);
+            }
+        });
+
         javax.swing.GroupLayout panelLayout = new javax.swing.GroupLayout(panel);
         panel.setLayout(panelLayout);
         panelLayout.setHorizontalGroup(
@@ -115,27 +138,27 @@ public class InicioSesion extends javax.swing.JFrame {
             .addGroup(panelLayout.createSequentialGroup()
                 .addGap(20, 20, 20)
                 .addComponent(CuadroImagen, javax.swing.GroupLayout.PREFERRED_SIZE, 180, javax.swing.GroupLayout.PREFERRED_SIZE)
+                .addGap(7, 7, 7)
                 .addGroup(panelLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+                    .addComponent(TituloInicioSesion, javax.swing.GroupLayout.PREFERRED_SIZE, 301, javax.swing.GroupLayout.PREFERRED_SIZE)
                     .addGroup(panelLayout.createSequentialGroup()
-                        .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
-                        .addComponent(TituloInicioSesion, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE))
-                    .addGroup(panelLayout.createSequentialGroup()
-                        .addGap(15, 15, 15)
+                        .addGap(8, 8, 8)
                         .addGroup(panelLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-                            .addComponent(txtCorreo, javax.swing.GroupLayout.Alignment.TRAILING)
+                            .addComponent(Correo, javax.swing.GroupLayout.PREFERRED_SIZE, 126, javax.swing.GroupLayout.PREFERRED_SIZE)
+                            .addComponent(txtCorreo, javax.swing.GroupLayout.PREFERRED_SIZE, 256, javax.swing.GroupLayout.PREFERRED_SIZE)
+                            .addComponent(Contraseña, javax.swing.GroupLayout.PREFERRED_SIZE, 123, javax.swing.GroupLayout.PREFERRED_SIZE)
                             .addGroup(panelLayout.createSequentialGroup()
-                                .addGroup(panelLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-                                    .addComponent(Contraseña, javax.swing.GroupLayout.PREFERRED_SIZE, 123, javax.swing.GroupLayout.PREFERRED_SIZE)
-                                    .addComponent(Correo, javax.swing.GroupLayout.PREFERRED_SIZE, 126, javax.swing.GroupLayout.PREFERRED_SIZE))
-                                .addGap(0, 0, Short.MAX_VALUE))
-                            .addComponent(txtcontra, javax.swing.GroupLayout.Alignment.TRAILING))
-                        .addContainerGap())))
-            .addGroup(javax.swing.GroupLayout.Alignment.TRAILING, panelLayout.createSequentialGroup()
+                                .addComponent(txtcontra, javax.swing.GroupLayout.PREFERRED_SIZE, 256, javax.swing.GroupLayout.PREFERRED_SIZE)
+                                .addGap(7, 7, 7)
+                                .addComponent(ver))
+                            .addGroup(panelLayout.createSequentialGroup()
+                                .addGap(255, 255, 255)
+                                .addComponent(ocultar, javax.swing.GroupLayout.PREFERRED_SIZE, 40, javax.swing.GroupLayout.PREFERRED_SIZE))))))
+            .addGroup(panelLayout.createSequentialGroup()
                 .addGap(205, 205, 205)
                 .addComponent(btncrearcuenta, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
-                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED, 85, Short.MAX_VALUE)
-                .addComponent(btniIngresar, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
-                .addContainerGap())
+                .addGap(91, 91, 91)
+                .addComponent(btniIngresar, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE))
         );
         panelLayout.setVerticalGroup(
             panelLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
@@ -147,17 +170,24 @@ public class InicioSesion extends javax.swing.JFrame {
                         .addComponent(TituloInicioSesion, javax.swing.GroupLayout.PREFERRED_SIZE, 20, javax.swing.GroupLayout.PREFERRED_SIZE)
                         .addGap(34, 34, 34)
                         .addComponent(Correo)
-                        .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
+                        .addGap(7, 7, 7)
                         .addComponent(txtCorreo, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
                         .addGap(47, 47, 47)
                         .addComponent(Contraseña)
-                        .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
-                        .addComponent(txtcontra, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)))
-                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
+                        .addGap(7, 7, 7)
+                        .addGroup(panelLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+                            .addComponent(txtcontra, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
+                            .addGroup(panelLayout.createSequentialGroup()
+                                .addGap(3, 3, 3)
+                                .addComponent(ver))
+                            .addGroup(panelLayout.createSequentialGroup()
+                                .addGap(5, 5, 5)
+                                .addComponent(ocultar)))))
+                .addGap(7, 7, 7)
                 .addGroup(panelLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING, false)
-                    .addComponent(btniIngresar, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
-                    .addComponent(btncrearcuenta, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE))
-                .addGap(33, 33, 33))
+                    .addComponent(btncrearcuenta, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
+                    .addComponent(btniIngresar, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE))
+                .addGap(0, 13, Short.MAX_VALUE))
         );
 
         javax.swing.GroupLayout layout = new javax.swing.GroupLayout(getContentPane());
@@ -220,8 +250,8 @@ public class InicioSesion extends javax.swing.JFrame {
             {
                 for (Usuario usuario : CrearCuenta.getUsuarios()) 
                 {
-                    if((usuario.getCorreo().equals(this.txtCorreo.getText()))&&(usuario.getContraseña().equals(String.valueOf(this.txtcontra.getPassword()))))
-                    //Arrays.equals(CuadroNombre.getText(), usuario.getCorreo(i));
+                    //if((usuario.getCorreo().equals(this.txtCorreo.getText()))&&(usuario.getContraseña().equals(String.valueOf(this.txtcontra.getPassword()))))
+                    if((usuario.getCorreo().equals(hash.sha1(this.txtCorreo.getText().toLowerCase())))&&(usuario.getContraseña().equals(hash.sha1(String.valueOf(this.txtcontra.getPassword())))))
                     {
                         JOptionPane.showMessageDialog(this, "Inicio de sesion exitoso. Bienvenido", "Inicio de sesion", JOptionPane.INFORMATION_MESSAGE);
                         control=true;
@@ -238,7 +268,7 @@ public class InicioSesion extends javax.swing.JFrame {
                 }
                 if(control!=true)
                 {
-                    JOptionPane.showMessageDialog(this, "Revise la informacion que escribio en los campos de informacion, intente nuevamente", "Inicio de sesion", JOptionPane.CANCEL_OPTION);
+                    JOptionPane.showMessageDialog(this, "Revise los datos que escribio en los campos de informacion sean correctos, intente nuevamente", "Inicio de sesion", JOptionPane.CANCEL_OPTION);
                     
                 }
             }
@@ -252,6 +282,18 @@ public class InicioSesion extends javax.swing.JFrame {
             System.out.print("NO HAY USUSARIOS REGISTRADOS");
         }
     }//GEN-LAST:event_txtentrarMouseClicked
+
+    private void verMouseClicked(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_verMouseClicked
+        ver.setVisible(false);
+        ocultar.setVisible(true);
+        txtcontra.setEchoChar((char)0);
+    }//GEN-LAST:event_verMouseClicked
+
+    private void ocultarMouseClicked(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_ocultarMouseClicked
+        ver.setVisible(true);
+        ocultar.setVisible(false);
+        txtcontra.setEchoChar('*');
+    }//GEN-LAST:event_ocultarMouseClicked
 
     public static void main(String args[]) {
         /* Set the Nimbus look and feel */
@@ -292,10 +334,13 @@ public class InicioSesion extends javax.swing.JFrame {
     private javax.swing.JLabel TituloInicioSesion;
     private javax.swing.JPanel btncrearcuenta;
     private javax.swing.JPanel btniIngresar;
+    private javax.swing.JComboBox<String> jComboBox1;
+    private javax.swing.JLabel ocultar;
     private javax.swing.JPanel panel;
     private javax.swing.JTextField txtCorreo;
     private javax.swing.JLabel txtccuenta;
     private javax.swing.JPasswordField txtcontra;
     private javax.swing.JLabel txtentrar;
+    private javax.swing.JLabel ver;
     // End of variables declaration//GEN-END:variables
 }
