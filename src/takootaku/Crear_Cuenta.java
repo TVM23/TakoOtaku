@@ -53,20 +53,16 @@ public class Crear_Cuenta extends javax.swing.JFrame {
         setDefaultCloseOperation(javax.swing.WindowConstants.EXIT_ON_CLOSE);
 
         panel.setBackground(new java.awt.Color(255, 255, 255));
-        panel.setLayout(new org.netbeans.lib.awtextra.AbsoluteLayout());
 
         cuadroimagen.setHorizontalAlignment(javax.swing.SwingConstants.CENTER);
         cuadroimagen.setText("imagen");
-        panel.add(cuadroimagen, new org.netbeans.lib.awtextra.AbsoluteConstraints(12, 23, 186, 277));
 
         titulocc.setFont(new java.awt.Font("Segoe UI", 1, 18)); // NOI18N
         titulocc.setHorizontalAlignment(javax.swing.SwingConstants.CENTER);
         titulocc.setText("CREAR CUENTA");
-        panel.add(titulocc, new org.netbeans.lib.awtextra.AbsoluteConstraints(210, 23, 289, -1));
 
         correo.setFont(new java.awt.Font("Segoe UI", 3, 12)); // NOI18N
         correo.setText("Correo electrónico");
-        panel.add(correo, new org.netbeans.lib.awtextra.AbsoluteConstraints(210, 66, -1, -1));
 
         txtcorreo.setForeground(new java.awt.Color(204, 204, 204));
         txtcorreo.setText("Ingrese una direccion de correo");
@@ -75,11 +71,9 @@ public class Crear_Cuenta extends javax.swing.JFrame {
                 txtcorreoMousePressed(evt);
             }
         });
-        panel.add(txtcorreo, new org.netbeans.lib.awtextra.AbsoluteConstraints(210, 89, 266, -1));
 
         nombre.setFont(new java.awt.Font("Segoe UI", 3, 12)); // NOI18N
         nombre.setText("Nombre de usuario");
-        panel.add(nombre, new org.netbeans.lib.awtextra.AbsoluteConstraints(210, 129, 121, -1));
 
         txtnombre.setForeground(new java.awt.Color(204, 204, 204));
         txtnombre.setText("Ingrese su nombre de usuario");
@@ -88,11 +82,9 @@ public class Crear_Cuenta extends javax.swing.JFrame {
                 txtnombreMousePressed(evt);
             }
         });
-        panel.add(txtnombre, new org.netbeans.lib.awtextra.AbsoluteConstraints(210, 152, 266, -1));
 
         contra.setFont(new java.awt.Font("Segoe UI", 3, 12)); // NOI18N
         contra.setText("Contraseña");
-        panel.add(contra, new org.netbeans.lib.awtextra.AbsoluteConstraints(210, 192, 121, -1));
 
         txtcontra.setForeground(new java.awt.Color(204, 204, 204));
         txtcontra.setText("********");
@@ -101,11 +93,9 @@ public class Crear_Cuenta extends javax.swing.JFrame {
                 txtcontraMousePressed(evt);
             }
         });
-        panel.add(txtcontra, new org.netbeans.lib.awtextra.AbsoluteConstraints(210, 215, 266, -1));
 
         confirmarcontra.setFont(new java.awt.Font("Segoe UI", 3, 12)); // NOI18N
         confirmarcontra.setText("Confirmar contraseña");
-        panel.add(confirmarcontra, new org.netbeans.lib.awtextra.AbsoluteConstraints(210, 255, 128, -1));
 
         txtconfirmarcontra.setForeground(new java.awt.Color(204, 204, 204));
         txtconfirmarcontra.setText("********");
@@ -114,7 +104,6 @@ public class Crear_Cuenta extends javax.swing.JFrame {
                 txtconfirmarcontraMousePressed(evt);
             }
         });
-        panel.add(txtconfirmarcontra, new org.netbeans.lib.awtextra.AbsoluteConstraints(210, 278, 266, -1));
 
         txtcrear.setHorizontalAlignment(javax.swing.SwingConstants.CENTER);
         txtcrear.setText("CREAR CUENTA");
@@ -136,8 +125,6 @@ public class Crear_Cuenta extends javax.swing.JFrame {
             .addComponent(txtcrear, javax.swing.GroupLayout.DEFAULT_SIZE, 29, Short.MAX_VALUE)
         );
 
-        panel.add(btncrear, new org.netbeans.lib.awtextra.AbsoluteConstraints(376, 317, -1, -1));
-
         generarcontra.setBackground(new java.awt.Color(255, 255, 255));
         generarcontra.setFont(new java.awt.Font("Segoe UI", 0, 8)); // NOI18N
         generarcontra.setForeground(new java.awt.Color(0, 153, 255));
@@ -148,7 +135,6 @@ public class Crear_Cuenta extends javax.swing.JFrame {
                 generarcontraMouseClicked(evt);
             }
         });
-        panel.add(generarcontra, new org.netbeans.lib.awtextra.AbsoluteConstraints(408, 245, -1, -1));
 
         btnVolver.setBackground(new java.awt.Color(255, 255, 255));
 
@@ -173,15 +159,12 @@ public class Crear_Cuenta extends javax.swing.JFrame {
             .addComponent(txtVolver, javax.swing.GroupLayout.DEFAULT_SIZE, 20, Short.MAX_VALUE)
         );
 
-        panel.add(btnVolver, new org.netbeans.lib.awtextra.AbsoluteConstraints(0, 0, -1, -1));
-
         ver.setText("Ver");
         ver.addMouseListener(new java.awt.event.MouseAdapter() {
             public void mouseClicked(java.awt.event.MouseEvent evt) {
                 verMouseClicked(evt);
             }
         });
-        panel.add(ver, new org.netbeans.lib.awtextra.AbsoluteConstraints(481, 218, -1, -1));
 
         ocultar.setText("Ocultar");
         ocultar.addMouseListener(new java.awt.event.MouseAdapter() {
@@ -189,7 +172,80 @@ public class Crear_Cuenta extends javax.swing.JFrame {
                 ocultarMouseClicked(evt);
             }
         });
-        panel.add(ocultar, new org.netbeans.lib.awtextra.AbsoluteConstraints(480, 220, -1, -1));
+
+        javax.swing.GroupLayout panelLayout = new javax.swing.GroupLayout(panel);
+        panel.setLayout(panelLayout);
+        panelLayout.setHorizontalGroup(
+            panelLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+            .addComponent(btnVolver, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
+            .addGroup(panelLayout.createSequentialGroup()
+                .addGap(12, 12, 12)
+                .addComponent(cuadroimagen, javax.swing.GroupLayout.PREFERRED_SIZE, 186, javax.swing.GroupLayout.PREFERRED_SIZE)
+                .addGap(12, 12, 12)
+                .addGroup(panelLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+                    .addComponent(titulocc, javax.swing.GroupLayout.PREFERRED_SIZE, 289, javax.swing.GroupLayout.PREFERRED_SIZE)
+                    .addComponent(correo)
+                    .addComponent(txtcorreo, javax.swing.GroupLayout.PREFERRED_SIZE, 266, javax.swing.GroupLayout.PREFERRED_SIZE)
+                    .addComponent(nombre, javax.swing.GroupLayout.PREFERRED_SIZE, 121, javax.swing.GroupLayout.PREFERRED_SIZE)
+                    .addComponent(txtnombre, javax.swing.GroupLayout.PREFERRED_SIZE, 266, javax.swing.GroupLayout.PREFERRED_SIZE)
+                    .addComponent(contra, javax.swing.GroupLayout.PREFERRED_SIZE, 121, javax.swing.GroupLayout.PREFERRED_SIZE)
+                    .addGroup(panelLayout.createSequentialGroup()
+                        .addComponent(txtcontra, javax.swing.GroupLayout.PREFERRED_SIZE, 266, javax.swing.GroupLayout.PREFERRED_SIZE)
+                        .addGap(4, 4, 4)
+                        .addGroup(panelLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+                            .addGroup(panelLayout.createSequentialGroup()
+                                .addGap(1, 1, 1)
+                                .addComponent(ver))
+                            .addComponent(ocultar)))
+                    .addGroup(panelLayout.createSequentialGroup()
+                        .addComponent(confirmarcontra, javax.swing.GroupLayout.PREFERRED_SIZE, 128, javax.swing.GroupLayout.PREFERRED_SIZE)
+                        .addGap(70, 70, 70)
+                        .addComponent(generarcontra))
+                    .addComponent(txtconfirmarcontra, javax.swing.GroupLayout.PREFERRED_SIZE, 266, javax.swing.GroupLayout.PREFERRED_SIZE)))
+            .addGroup(panelLayout.createSequentialGroup()
+                .addGap(376, 376, 376)
+                .addComponent(btncrear, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE))
+        );
+        panelLayout.setVerticalGroup(
+            panelLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+            .addGroup(panelLayout.createSequentialGroup()
+                .addComponent(btnVolver, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
+                .addGap(3, 3, 3)
+                .addGroup(panelLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+                    .addComponent(cuadroimagen, javax.swing.GroupLayout.PREFERRED_SIZE, 277, javax.swing.GroupLayout.PREFERRED_SIZE)
+                    .addGroup(panelLayout.createSequentialGroup()
+                        .addComponent(titulocc)
+                        .addGap(18, 18, 18)
+                        .addComponent(correo)
+                        .addGap(7, 7, 7)
+                        .addComponent(txtcorreo, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
+                        .addGap(18, 18, 18)
+                        .addComponent(nombre)
+                        .addGap(7, 7, 7)
+                        .addComponent(txtnombre, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
+                        .addGap(18, 18, 18)
+                        .addComponent(contra)
+                        .addGap(7, 7, 7)
+                        .addGroup(panelLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+                            .addComponent(txtcontra, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
+                            .addGroup(panelLayout.createSequentialGroup()
+                                .addGap(3, 3, 3)
+                                .addGroup(panelLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+                                    .addComponent(ver)
+                                    .addGroup(panelLayout.createSequentialGroup()
+                                        .addGap(2, 2, 2)
+                                        .addComponent(ocultar)))))
+                        .addGap(8, 8, 8)
+                        .addGroup(panelLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+                            .addGroup(panelLayout.createSequentialGroup()
+                                .addGap(10, 10, 10)
+                                .addComponent(confirmarcontra))
+                            .addComponent(generarcontra))
+                        .addGap(7, 7, 7)
+                        .addComponent(txtconfirmarcontra, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)))
+                .addGap(17, 17, 17)
+                .addComponent(btncrear, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE))
+        );
 
         javax.swing.GroupLayout layout = new javax.swing.GroupLayout(getContentPane());
         getContentPane().setLayout(layout);
