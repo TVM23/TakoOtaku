@@ -23,15 +23,13 @@ public class Contenedor extends javax.swing.JFrame {
         switch(opcion)
         {
             case 1:
+                /*
                 Ropa_Principal obmropa = new Ropa_Principal();
                 obmropa.setVisible(true);
-                desktopPane.add(obmropa);
+                desktopPane.add(obmropa);*/
                 break;
             case 2:
-                Manga_Principal obmanga = new Manga_Principal();
-                obmanga.setVisible(true);
-                desktopPane.add(obmanga);
-                break;
+                
         }
     }
 

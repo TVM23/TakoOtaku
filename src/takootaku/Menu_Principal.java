@@ -156,6 +156,11 @@ public class Menu_Principal extends javax.swing.JFrame {
         menuBar.add(jMenu1);
 
         jMenu2.setText("Accesorios");
+        jMenu2.addMouseListener(new java.awt.event.MouseAdapter() {
+            public void mouseClicked(java.awt.event.MouseEvent evt) {
+                jMenu2MouseClicked(evt);
+            }
+        });
         menuBar.add(jMenu2);
 
         jMenu3.setText("Manga");
@@ -167,6 +172,16 @@ public class Menu_Principal extends javax.swing.JFrame {
         menuBar.add(jMenu3);
 
         jMenu4.setText("Figurillas");
+        jMenu4.addMouseListener(new java.awt.event.MouseAdapter() {
+            public void mouseClicked(java.awt.event.MouseEvent evt) {
+                jMenu4MouseClicked(evt);
+            }
+        });
+        jMenu4.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                jMenu4ActionPerformed(evt);
+            }
+        });
         menuBar.add(jMenu4);
 
         jMenu5.setText("Contacto");
@@ -196,18 +211,38 @@ public class Menu_Principal extends javax.swing.JFrame {
     }// </editor-fold>//GEN-END:initComponents
 
     private void jMenu3MouseClicked(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_jMenu3MouseClicked
-        opcion=2;
-        Contenedor();
+        
+        //opcion=2;
+        //Contenedor();
     }//GEN-LAST:event_jMenu3MouseClicked
 
     private void jMenu1MouseClicked(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_jMenu1MouseClicked
-       opcion=1;
-       Contenedor();
+       Principal_Ropa obr = new Principal_Ropa();
+       obr.setVisible(true);
+       dispose();
+        //opcion=1;
+       //Contenedor();
     }//GEN-LAST:event_jMenu1MouseClicked
-    public void Contenedor(){
+
+    private void jMenu4ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jMenu4ActionPerformed
+        // TODO add your handling code here:
+    }//GEN-LAST:event_jMenu4ActionPerformed
+
+    private void jMenu4MouseClicked(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_jMenu4MouseClicked
+        Principal_Figurillas obf = new Principal_Figurillas();
+        obf.setVisible(true);
+        dispose();
+    }//GEN-LAST:event_jMenu4MouseClicked
+
+    private void jMenu2MouseClicked(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_jMenu2MouseClicked
+        Principal_Accesorios oba = new Principal_Accesorios();
+        oba.setVisible(true);
+        dispose();
+    }//GEN-LAST:event_jMenu2MouseClicked
+    /*public void Contenedor(){
         Contenedor obcon = new Contenedor(opcion);
         obcon.setVisible(true);
-    }
+    }*/
     /**
      * @param args the command line arguments
      */
